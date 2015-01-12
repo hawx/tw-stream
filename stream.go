@@ -16,11 +16,6 @@ type auth struct {
 	Credentials *oauth.Credentials
 }
 
-func (a *auth) Name() string {
-	// get name of user!?!?
-	return "me"
-}
-
 func Auth(consumerKey, consumerSecret, accessToken, accessSecret string) *auth {
 	return &auth{
 		Oauth: &oauth.Client{
